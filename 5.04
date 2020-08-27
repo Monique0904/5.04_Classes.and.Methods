@@ -1,0 +1,74 @@
+#program start
+
+#input section
+	#set up variable level and set it equal to the users input
+	#call newSuperhero.addStrengthPts
+	#newSuperhero.guessPower()
+	
+#processing section
+	#set up the Superhero class
+	#the attributes neame, superPower, and assignedColor are added to the parameter list with empty strings as default value
+	#the attribute strengthPts is added to the parameter list and set equal to zero
+	#value for attribute name is set equal to name 
+	#value for attribute  strengthPts is set equal to strengthPts
+	#value for attribute superPower is set equal to superPower
+	#value for attribute assignedColor is set equal to assignedColor
+	#define functiom addStrengthPts with self as its parameter
+	#set self.strengthPts equal to "8"
+	#set level equal to the users input 	 
+	#if level is equal to "8" display "You're right! The Superheros' strength level is " + self.strengthPts
+	#else display "Not quite... The Superheros' strength level is " + self.strengthPts
+	#define function guessPower with self as its parameter
+	#set self.superpower equal to "invisibility"
+	#set power equal to the users input
+	#if power equal to "invisibility" display "You got it! Her super power is invisibility."
+	#else display "Actually her super power is invisibility!"
+	#create a superhero and set parameters equal to "Green Phantom", "8", "Invisibility", "Green" 
+	
+#output section
+	#display "Superhero name: " + newSuperhero.name
+	#display "Superpower: " + newSuperhero.superPower
+	#display "Superhero costume color: " + newSuperhero.assignedColor + "\n"
+	#display Superhero short story 
+	
+#eop
+
+class Superhero:
+
+	def __init__(self, name = "", strengthPts = 0, superPower = "", assignedColor = ""):
+
+		self.name = name
+		self.strengthPts = strengthPts
+		self.superPower = superPower
+		self.assignedColor = assignedColor
+
+	def addStrengthPts(self):
+ 		
+		self.strengthPts = "8"
+		level = input("What do you think the Superheros strength level is? (1-10)")
+		if(level == "8"):
+			print("You're right! The Superheros strength level is " + self.strengthPts)
+		else:
+			print("Not quite... The Superheros strength level is " + self.strengthPts)
+	
+	def guessPower(self):
+	
+		self.superPower = "invisibility"
+		power = input("Before you read the story guess what super power Green Phantoms has:").lower()
+		if(power == "invisibility"):
+			print("You got it! Her superpower is invisibility.")
+		else:
+			print("Actually her superpower is invisibility!")
+		
+def main():
+
+	
+	newSuperhero = Superhero("Green Phantom", "8", "Invisibility", "Green")
+	print("Superhero name: " + newSuperhero.name)
+	print("Superhero costume color: " + newSuperhero.assignedColor + "\n")
+	newSuperhero.addStrengthPts()
+	newSuperhero.guessPower()
+	print("  \n  Elizabeth Green was a normal girl entering her sophomore year of high school. She wasn't very popular, in fact it was almost as if she was invisible. \nNobody really noticed her and she didn't have many friends so she flew under the radar most of the time. One day she was lying on her bed taste \ntesting a new flavor of Coke that had not been released yet which her father and the rest of the scientists at the CocaCola factory had been working on. After finishing her homework and eating dinner she decided to head to bed. Later that night she woke up to a strange feeling in her stomach. She then walked over to the \nbathroom. But when she got to the bathroom she was flabbergasted by what she saw in the mirror... or what she didn’t see. Elizabeth was invisible! Her \nthoughts were going all over the place and she didn’t know how to control it. But knowing that she couldn’t wake her parents up and explain the problem she made her way back to her room. Elizabeth tried her best to become visible again, she sat in front of the mirror, she tried to go back to sleep, \nand she even tried moving a couple objects. As the clock struck 5:00 am her reflection began to appear again. She soon figured out that by simply \nfocusing all her thoughts on either being invisible or not she could change between the two states. Flash forward two years and Elizabeth, best known as " + newSuperhero.name + ", is now fighting crime and making headlines. She is fighting criminals by outsmarting them using her invisibility against them, by \ndoing this she has not only saved lives but stopped other crime, like robberies, as well.")  
+	
+main()
+ 
